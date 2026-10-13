@@ -1,0 +1,11 @@
+import { Router } from "express";
+import usersRoutes from "../routes/usersRoutes.mjs";
+import productRoutes from "../routes/productRoutes.mjs";
+import authRoute from "../routes/auth.mjs";
+import cartRoute from "../routes/cart.mjs";
+const router = Router();
+router.use(authRoute);
+router.use(usersRoutes);
+router.use(cartRoute);
+router.use(productRoutes);
+export default router;
